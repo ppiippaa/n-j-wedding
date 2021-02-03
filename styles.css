@@ -1,0 +1,288 @@
+body {
+    margin: 0;
+    font-family: serif;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*Nav Bar*/
+
+.navbar {
+    width: 25vh;
+}
+
+.navbar-collapse {
+    background: rgba(221, 221, 221, 0.5);
+}
+
+.nav-link {
+    font-family: "Playfair Display";
+    text-align: center;
+    color: black!important;
+}
+
+.nav-link:hover {
+    opacity: 0.7!important;
+}
+
+
+
+/* Landing Page*/
+
+
+.main-heading {
+    text-align: center;
+    color: #557571;
+    font-family: "Playfair Display";
+    padding-top: 1rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+
+.showcase {
+    height: 100vh;
+    width: 100%;
+    background-image: url("images/mainPic1.jpg");
+    background-size: cover;
+    background-position: center;
+    -webkit-filter: blur(0px);
+    -webkit-animation: fadein linear 1.5s;
+
+}
+
+@-webkit-keyframes fadein {
+    0% {    -webkit-filter: blur(3x);}
+    28% { -webkit-filter: blur(3px);}
+    56% { -webkit-filter: blur(3px);}
+    100% {  -webkit-filter: blur(0px);}
+}
+
+
+.sub-heading {
+    color: black;
+    text-align: center;
+    color: #557571;
+    font-family: "Playfair Display";
+    margin: 0.5rem 0;
+}
+
+
+
+/* Wedding Schedule */
+
+.grid-3 {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.schedule-icon {
+    margin-bottom: 2rem;
+    opacity: 0.8;
+}
+
+/* .wedding-schedule h3 {
+  margin-bottom: 1.5rem;
+} */
+
+
+
+/* Directions/Venue */
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+
+}
+.map-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+
+.grid-2{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+
+.heart-list li:not(:last-of-type) {
+    margin-bottom: 2.5rem;
+
+}
+
+.heart-list li {
+    margin-left: 2rem;
+}
+
+/* Our Story  */
+
+
+.image {
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+/* Explore The Area*/
+
+
+
+/* RSVP */
+.rsvp {
+    /* height: 100vh; */
+}
+
+.button-div {
+    text-align: center;
+}
+
+.button-custon {
+    font-family: serif;
+}
+
+/* Footer */
+
+footer {
+    height: 50px;
+    display: flex!important;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-section span {
+    margin: 10px;
+    font-family: "Playfair Display";
+}
+
+
+
+/* General Styles*/
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+
+}
+
+.center {
+    text-align: center;
+    margin: auto;
+}
+
+.backdrop-p {
+    background-color: #e8ded2;
+}
+
+.backdrop-g {
+    background-color: #94b4a4;
+}
+
+h3 {
+    font-family: "Playfair Display";
+    opacity: 0.8;
+    padding-bottom: 0.7rem!important;
+    padding-top: 1rem!important;
+}
+
+.section-title {
+    margin-top: 2rem;
+}
+
+
+.heart-list li::marker {
+    font-size: 0.7rem;
+    content: "🖤"
+}
+
+.heart-list li {
+    padding-left:15px;
+}
+
+
+/* Media Queries */
+
+/* Small Screens */
+@media (max-width: 1050px) {
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+        justify-content: center;
+    }
+
+    .map {
+        margin-bottom: 3rem;
+    }
+
+    .heart-list li {
+        padding: 0;
+        margin-left:0;
+    }
+
+    .heart-list li::marker {
+        content: "";
+    }
+
+    ul{
+        margin-top: 2.5rem!important;
+    }
+
+
+
+}
+
+
+@media (max-width: 560px) {
+
+
+    .grid-3 {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .wedding-schedule p {
+        border-bottom: dashed 1px;
+        padding: 1.2rem 1rem;
+    }
+
+
+    .venue-image {
+        margin-bottom: 3rem;
+        margin-right: 0;
+
+    }
+
+    .main-heading {
+        font-size: 2.2rem;
+        padding-top: 3.5rem;
+    }
+
+    .sub-heading {
+        font-size: 1.2rem;
+    }
+
+}
