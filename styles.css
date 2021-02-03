@@ -44,6 +44,15 @@ body {
     font-weight: 600;
 }
 
+.main-heading:after {
+    content: ""; /* This is necessary for the pseudo element to work. */
+    display: block; /* This will put the pseudo element on its own line. */
+    margin: 0 auto; /* This will center the border. */
+    width: 37%; /* Change this to whatever width you want. */
+    padding-top: 20px; /* This creates some space between the element and the border. */
+    border-bottom: 1px solid lightgray; /* This creates the border. Replace black with whatever color you want. */
+}
+
 
 .showcase {
     height: 100vh;
@@ -73,7 +82,6 @@ body {
 }
 
 
-
 /* Wedding Schedule */
 
 .grid-3 {
@@ -91,7 +99,10 @@ body {
   margin-bottom: 1.5rem;
 } */
 
-
+.fas:hover,
+.far:hover {
+    transform: translateY(-3px);
+}
 
 /* Directions/Venue */
 .map-responsive{
@@ -105,6 +116,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 15px;
 }
 
 .map-responsive iframe{
@@ -132,11 +144,26 @@ body {
 
 /* Our Story  */
 
-
 .image {
     width: 100%;
     padding-bottom: 30px;
 }
+
+.image:hover {
+    filter: brightness(60%);
+
+}
+
+figcaption {
+    text-align: center;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 18px;
+    font-family: 'Playfair Display';
+    color: dimgrey;
+    letter-spacing: 3px;
+}
+
 
 /* Explore The Area*/
 
@@ -145,14 +172,24 @@ body {
 /* RSVP */
 .rsvp {
     /* height: 100vh; */
+    background-color: #e8ded2;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.53'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
 }
 
 .button-div {
     text-align: center;
+    transition: all;
 }
 
-.button-custon {
+.button-custom {
     font-family: serif;
+    box-shadow: 0 3px 2px 2px rgba(0, 0, 0, 0.45) ;
+
+}
+
+.button-custom:active {
+    transform: translateY(2px);
+    outline: none;
 }
 
 /* Footer */
@@ -195,6 +232,8 @@ footer {
     background-color: #94b4a4;
 }
 
+
+
 h3 {
     font-family: "Playfair Display";
     opacity: 0.8;
@@ -226,9 +265,14 @@ h3 {
         grid-template-columns: 1fr;
     }
 
+
     .grid-2 {
         grid-template-columns: 1fr;
         justify-content: center;
+    }
+
+    .main-heading:after {
+        width: 60%;
     }
 
     .map {
@@ -262,6 +306,10 @@ h3 {
 
     .grid-2 {
         grid-template-columns: 1fr;
+    }
+
+    .main-heading:after {
+        width: 50%;
     }
 
     .wedding-schedule p {
